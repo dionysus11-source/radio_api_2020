@@ -44,7 +44,7 @@ def getRadioInfo(location):
         p_list.append(a)
     b = []
     for i in range(len(p_list)):
-        info = {channels[i].text + ' ' + getFrequency(location,channels[i].text) : p_list[i]}
+        info = {'channel' : channels[i].text + ' ' + getFrequency(location,channels[i].text), 'schedule' : p_list[i]}
         b.append(info)
         #ret[channels[i].text] = p_list[i]
     ret['programs'] = b
@@ -55,7 +55,3 @@ if __name__ == '__main__':
 
 
 # In[ ]:
-
-
-
-
